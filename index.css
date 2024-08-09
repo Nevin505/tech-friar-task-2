@@ -1,0 +1,107 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+:root{
+    --inlinePaddingDesktop:2.5rem;
+    --inlinePaddingSmallerDevice:1.25rem
+
+}
+.navBar-Container{
+    max-width:90rem;
+    margin: 0 auto;
+    height: 7.5rem;
+    border: blue 2px solid;
+    position: relative;
+    padding-inline: var(--inlinePaddingDesktop);
+}
+#hamburgerMenu{
+    display: none;
+}
+.BrandLogo{
+    max-width: 15rem;
+}
+.navigation-header{
+    gap: 2.5rem;
+    display: flex;
+    justify-content: space-between;
+}
+.navbar-menu{
+   display: flex;
+   gap: 1rem;
+   justify-content: center;
+   align-items: center;
+   & a{
+    text-decoration: none;
+   }
+   & .login-indicator{
+    max-width: 7.2rem;
+   }
+}
+.Social-Media-Icons{
+     display: block;
+    margin-left: auto;
+}
+.drop-menu{
+    display: none;
+}
+
+@media(max-width:768px){
+    .navBar-Container{
+        padding-inline: var(--inlinePaddingSmallerDevice);
+    }
+   .BrandLogo{
+     width: 12.5rem;
+     height: 1.5rem;
+   }
+   .Brandlogo-hamburger{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    border: blue 2px solid;
+    & #hamburgerMenu{
+        display: block;
+    }
+   }
+   .navbar-menu{
+    display: none;
+   }
+   .drop-menu{
+    display: none;
+    position: absolute;
+     flex-direction: column;
+     padding-top: 1rem;
+     gap: 1rem;
+     width: 90%;
+     height: 34rem;
+     background-color: white;
+     top: 0;
+     right: 0;
+     z-index: 99;
+     border: black 1px solid;
+
+     & .drop-menu-navMenu{
+        display: flex;
+        gap: 1rem;
+        flex-direction: column;
+        align-items: flex-start;
+        height:100%;
+        padding-inline: 2.5rem;
+        & .buttonIcon{
+            display: block;
+            margin-top: auto;
+        }
+     }
+     & .closeIcon{
+        display: block;
+        margin-left: auto;
+        padding-inline: 1rem;
+     }
+   }
+   /* By Using Js To Add this class */
+   .show-dropDownMenu{
+    display: flex;
+   }
+   
+}
