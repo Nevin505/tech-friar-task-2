@@ -15,51 +15,87 @@
     border: blue 2px solid;
     position: relative;
     padding-inline: var(--inlinePaddingDesktop);
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+    padding-block: 0.4rem;
+    /* Style for those Info Regarding Drop / Service Details*/
+    & .service-info{
+        max-width: 50rem;
+        margin-left: auto;
+        font-size: 0.7rem;
+        font-weight: lighter;
+    }
 }
+
 #hamburgerMenu{
     display: none;
 }
 .BrandLogo{
+    display: block;
+    min-width: 10rem;
     max-width: 15rem;
+    margin-top: auto;
 }
 .navigation-header{
-    gap: 2.5rem;
     display: flex;
     justify-content: space-between;
+    gap: 2.5rem;
+    /* flex: 1; */
+    margin-block: auto;
 }
 .navbar-menu{
    display: flex;
    gap: 1rem;
    justify-content: center;
    align-items: center;
+   width: 50rem;
+   border:  yellow solid 1px;
+   padding-inline: 0.4rem;
    & a{
+    margin: 0 auto;
     text-decoration: none;
+    color: black;
+    text-align: center;
+    width: fit-content;
    }
    & .login-indicator{
-    max-width: 7.2rem;
+    max-width: 8rem;
    }
 }
-.Social-Media-Icons{
+.socialMediaIcons-group{
      display: block;
-    margin-left: auto;
+     margin-left: auto;
 }
-.drop-menu{
+.side-bar{
     display: none;
 }
+#closeButtonIcon{
+    display: block;
+    margin-left:auto;
+}
 
-@media(max-width:768px){
+@media(max-width:835px){
+    .socialMediaIcons-group{
+        display: none;
+    }
     .navBar-Container{
         padding-inline: var(--inlinePaddingSmallerDevice);
+         & .service-details{
+            display: none;
+         }
+
     }
    .BrandLogo{
-     width: 12.5rem;
-     height: 1.5rem;
+     width: 14.5rem;
+     height: 2.5rem;
    }
    .Brandlogo-hamburger{
     display: flex;
     width: 100%;
     justify-content: space-between;
     border: blue 2px solid;
+
     & #hamburgerMenu{
         display: block;
     }
@@ -67,19 +103,20 @@
    .navbar-menu{
     display: none;
    }
-   .drop-menu{
+   .side-bar{
     display: none;
     position: absolute;
      flex-direction: column;
-     padding-top: 1rem;
+     padding:1.5rem;
      gap: 1rem;
-     width: 90%;
+     width: 80%;
      height: 34rem;
      background-color: white;
      top: 0;
      right: 0;
      z-index: 99;
-     border: black 1px solid;
+     border: black 0.1rem solid;
+     border-width:thin;
 
      & .drop-menu-navMenu{
         display: flex;
@@ -87,10 +124,19 @@
         flex-direction: column;
         align-items: flex-start;
         height:100%;
-        padding-inline: 2.5rem;
-        & .buttonIcon{
-            display: block;
+        padding-inline: 1.5rem;
+        /* Selecting the a tag present inside  */
+        & a{
+            text-decoration: none;
+            border-bottom: 0.1rem black solid;
+            width: 100%;
+            padding-block:0.6rem ;
+        }
+        & .loginSignUpButton{
             margin-top: auto;
+            border-radius: 1rem;
+            object-fit: contain;
+            border: 0;
         }
      }
      & .closeIcon{
@@ -104,4 +150,21 @@
     display: flex;
    }
    
+}
+
+@media(max-width:1024px){
+    .BrandLogo{
+        width: 13.5rem;
+        height: 2.8rem;
+    }
+.navBar-Container{
+    padding-inline: 1.6rem;
+}
+.navigation-header{
+ margin-top: auto;
+ gap: 2rem;
+}
+.navbar-menu{
+    gap: 0.6rem;
+}
 }

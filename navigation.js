@@ -1,8 +1,15 @@
 const hamBurgerIcon=document.getElementById('hamburgerMenu');
-console.log(hamBurgerIcon);
+
+const closeButtonIcon=document.getElementById('closeButtonIcon');
 
 hamBurgerIcon.addEventListener('click',()=>{
     console.log("Clicked");
     
-    document.getElementsByClassName('drop-menu')[0].classList.add('show-dropDownMenu')
+    document.getElementsByClassName('side-bar')[0].classList.add('show-dropDownMenu')
+})
+
+closeButtonIcon.addEventListener('click',()=>{
+    console.log("Clicked");
+    
+    document.getElementsByClassName('side-bar')[0].classList.remove('show-dropDownMenu')
 })

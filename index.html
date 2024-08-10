@@ -9,41 +9,40 @@
 <body>
     <header>
         <nav class="navBar-Container">
-            <img src="./images/Social-Media-Icons.svg" alt="" class="Social-Media-Icons">
+            <img src="./images/Social-Media-Icons.svg" width="90" alt="" class="socialMediaIcons-group">
             <div class="navigation-header"  >
                 <!-- Navigation header containing brand logo and hamburger menu -->
                 <div class="Brandlogo-hamburger">
-                    <img src="./images/BrandLogoText.svg" width="280" height="54" alt="AlHabtoor-BrandLogo" class="BrandLogo" >
+                    <img src="./images/BrandLogoText.svg" width="280" height="48" alt="AlHabtoor-BrandLogo" class="BrandLogo" >
                     <img src="./icons/charm_menu-hamburger.svg" alt="charm_menu-hamburger-icon" 
                     id="hamburgerMenu" >
                 </div>
-                <div  class="navbar-menu">
+                <!-- For Desktop and Larger Device whose width greater than 900px -->
+                    <div  class="navbar-menu">
+                        <a href="">About</a>
+                        <a href="">Offers</a>
+                        <a href="">Coporate</a>
+                        <a href="">Personal</a>
+                        <a href="">Locations</a>
+                        <a href="">Contact Us</a>
+                        <a href=""><img src="./icons/Bell-Icon.svg" alt="Bell-Icon-with-Notification" ></a>
+                        <a href=""><img src="./images/Person.svg" alt="" class="login-indicator" width="98"></a>
+                    </div> 
+                <!-- For Mobile Screen View  -->
+                <div  class="side-bar">
+                    <img src="./icons/Close-Icon.svg" alt="" id="closeButtonIcon" width="24" height="24">
+                    <div class="drop-menu-navMenu">
                     <a href="">About</a>
                     <a href="">Offers</a>
                     <a href="">Coporate</a>
                     <a href="">Personal</a>
                     <a href="">Locations</a>
                     <a href="">Contact Us</a>
-                    <a href=""><img src="./icons/Bell-Icon.svg" alt="Bell-Icon-with-Notification" ></a>
-                    <a href=""><img src="./images/Person.svg" alt="" class="login-indicator"></a>
-                </div> 
-<!-- For Mobile Screen View  -->
-                <div  class="drop-menu">
-                   <div>
-                    <img src="./icons/Close-Icon.svg" alt="" class="closeIcon">
-                   </div>
-                     <div class="drop-menu-navMenu">
-                      <a href="">About</a>
-                    <a href="">Offers</a>
-                    <a href="">Coporate</a>
-                    <a href="">Personal</a>
-                    <a href="">Locations</a>
-                    <a href="">Contact Us</a>
-                    <a href="" class="buttonIcon"><img src="./images/Person.svg" alt=""></a>
+                    <button class="loginSignUpButton"><img src="./images/Person.svg" alt=""></button>
                     </div>
                 </div>
             </div>
-            <p> Sunday Pick Up/Drop-Off only at Dubai Silicon Oasis & Habtoor Grand Sales Counters | All Rates inclusive of VAT. T&C’s apply | Follow us on Social Media for New Offers</p>
+            <p class="service-info"> Sunday Pick Up/Drop-Off  <span class="service-details">only at Dubai Silicon Oasis & Habtoor Grand Sales Counters | All Rates inclusive of VAT. T&C’s apply | Follow us on Social Media for New Offers</span></p>
         </nav>
     </header>
     <script src="./navigation.js"></script>
