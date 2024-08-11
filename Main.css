@@ -1,0 +1,119 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+:root{
+    --inlinePaddingDesktop:4rem;
+    --inlinePaddingSmallerDevice:1.25rem;
+    --primary-Color:#E21E26
+}
+/* Common Styles */
+.border-0{
+    border: none;
+}
+.pointer{
+cursor: pointer;
+}
+main{
+    overflow: hidden;
+    max-width:90rem;
+    margin: 0 auto; 
+    border: yellow 1px solid;
+    padding-inline: var(--inlinePaddingDesktop);
+    position: relative;
+}
+/* Desigin for the Quick Action Button */
+.car-booking-actions{
+    display: none;
+    justify-content: space-between;
+    gap: 0.8rem;
+    margin-top: 1rem;
+    & button{
+        flex: 1;
+        padding: 1rem 1.75rem;
+        border-radius: 0.25rem;
+    }
+    #bookCar-button{
+        background-color: var(--primary-Color);
+        border: 1px white solid;
+        color: white;
+    }
+    #quickBook-button{
+        background-color:white;
+        border: 1px var(--primary-Color) solid;
+        color: var(--primary-Color);
+
+    }
+}
+
+.onlyForMobileView{
+    display: none;
+}
+
+  /* Banner-Conatiner Section Style */
+  .banner-container{
+    position: relative;
+    padding:12.25rem 12.25rem;
+    background-image: url('./images/2018-Mitsubishi-ASX-1920x966\ 1.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin-top: 0.5rem;
+    & p{
+        color: white;
+    }
+}
+/* Banner-Section Content */
+.offer-details-container{
+    position: absolute;
+    max-width: 27.6rem;
+    display: flex;
+    gap: 0.8rem;
+    height: 3.66rem;
+    left: 31.5rem;
+    bottom: 6.25rem;
+   text-align: center;
+    & button{
+        width: 9.5rem;
+        height: 2rem;
+        font-size: smaller;
+        border-radius: 1rem;
+        background-color: #009046;;
+    }
+}
+/* Resposnive Design */
+@media(max-width:835px){
+
+    main{
+        padding-inline: var(--inlinePaddingSmallerDevice);
+    }
+    .car-booking-actions{
+        display: flex;
+    }
+    .visbleBookOptions{
+        display: flex;
+        /* justify-content: center;
+        align-items: center; */
+        flex: 1;
+    }
+    .onlyForMobileView{
+        display: flex;
+        flex-direction: column;
+        padding-top: 1rem;
+        justify-content: space-between;
+        /* align-items: center; */
+        /* border: 2px solid green; */
+    }
+   
+
+    .banner-container{
+         margin-top: 1rem;
+        padding:6.75rem;
+        background-size: cover;
+        background-position: center ;
+        margin-inline: -2.5rem;
+    }
+
+  
+}
