@@ -6,25 +6,37 @@
 :root{
     --inlinePaddingDesktop:4rem;
     --inlinePaddingSmallerDevice:1.25rem;
-    --primary-Color:#E21E26
+    --primary-Color:#E21E26;
+    --button-primary:var(--primary-Color)
 }
 /* Common Styles */
+
+a, a:active, a:focus {
+    outline: none;
+ }
+
+ button:focus {
+    outline: none;
+}
 .border-0{
     border: none;
 }
 .pointer{
 cursor: pointer;
 }
+a, a:active, a:focus {
+    outline: none;
+ }
 main{
-    overflow: hidden;
     max-width:90rem;
     margin: 0 auto; 
-    border: yellow 1px solid;
+    /* border: yellow 1px solid; */
     padding-inline: var(--inlinePaddingDesktop);
     position: relative;
+    overflow: hidden;   
 }
 /* Desigin for the Quick Action Button */
-.car-booking-actions{
+.car-booking-actionss{
     display: none;
     justify-content: space-between;
     gap: 0.8rem;
@@ -38,11 +50,14 @@ main{
         background-color: var(--primary-Color);
         border: 1px white solid;
         color: white;
+        outline:none;
+        outline: 0;
     }
     #quickBook-button{
         background-color:white;
         border: 1px var(--primary-Color) solid;
         color: var(--primary-Color);
+        outline:none;
 
     }
 }
@@ -67,34 +82,115 @@ main{
 /* Banner-Section Content */
 .offer-details-container{
     position: absolute;
-    max-width: 27.6rem;
+    width: 27.687rem;
     display: flex;
     gap: 0.8rem;
-    height: 3.66rem;
-    left: 31.5rem;
-    bottom: 6.25rem;
-   text-align: center;
+    height: 3.625rem;
+    left: 38%;
+    bottom: 18%;
+   text-align: start;
+   & p{
+    line-height: 1.65rem;
+    font-weight: 400;
+   }
     & button{
         width: 9.5rem;
-        height: 2rem;
+        height: 1.9rem;
+        padding: 0.33rem  1rem;
+        margin-left: -3.5rem;
         font-size: smaller;
         border-radius: 1rem;
+        font-size: 0.6rem;
+        font-weight: 600;
+        color: white;
         background-color: #009046;;
     }
 }
+
+/* Carousel Containers */
+.carousel-navigator{
+    position: absolute;
+    left: 35rem;
+    bottom: 1.875rem;
+}
+
+.popular-cars-section{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 24rem;
+    & h2{
+        padding: 1.8rem;
+    }
+}
+
+/* Horizontal Scroll Bar Desigin */
+.popular-cars-scroll-container{
+    overflow-x: scroll;
+    display: flex;
+    gap:1.375rem;
+    position: absolute;
+    left: 0rem;
+    right: -4rem;
+    bottom: 0;
+    scrollbar-width: none;
+}
+/* Each Card Item Present inside of the Horizontal ScrollBar  and the whole styles appiled to that card*/
+.car-item{
+    display: flex;
+    & .vehicle-image{
+        display: block;
+    }
+    & .car-item-details{
+        display: flex;
+        flex-direction: column;
+        justify-content:space-evenly;
+        width: 24.625rem;
+        padding:1.5rem 2.5rem;
+        border: 1px solid #D9D9D9;
+        & h3{
+            font-weight: 500;
+            font-size: 1.675rem;
+            color: #1A202C;
+        }
+        
+         & .car-item-description{
+            font-size: 0.75rem;
+            line-height: 1.15rem;
+         }
+    }
+    & .car-item-pricing{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        & button{
+            width: 6rem;
+            height: 2.25rem;
+            background-color: var(--primary-Color);
+            color: white;
+            border-radius: 0.25rem;
+        }
+        & .car-item-price{
+            font-size: 1rem;
+            font-weight: 600;
+        }
+    }
+}
+
+
+
 /* Resposnive Design */
 @media(max-width:835px){
 
     main{
         padding-inline: var(--inlinePaddingSmallerDevice);
     }
-    .car-booking-actions{
+    .car-booking-actionss{
         display: flex;
     }
     .visbleBookOptions{
         display: flex;
-        /* justify-content: center;
-        align-items: center; */
         flex: 1;
     }
     .onlyForMobileView{
@@ -102,11 +198,8 @@ main{
         flex-direction: column;
         padding-top: 1rem;
         justify-content: space-between;
-        /* align-items: center; */
-        /* border: 2px solid green; */
     }
    
-
     .banner-container{
          margin-top: 1rem;
         padding:6.75rem;
@@ -114,6 +207,85 @@ main{
         background-position: center ;
         margin-inline: -2.5rem;
     }
+    /* Mobile View Offer Details */
+.offer-details-container{
+    width: 18.75rem;
+    height: 1.96rem;
+    left: 28%;
+    bottom: 3.31rem;
+    & button{
+        width: 5.06rem;
+        height: 1.049rem;
+        font-size: 0.5075rem;
+        border-radius: 0;
+        padding: 0rem  0.66rem;
+        
+    }
+    }
+    .carousel-navigator{
+        position: absolute;
+        left: 40%;
+        bottom: 1.175rem;
+    }
+    /* For cart List */
+    .popular-cars-section{
+        height: 25rem;
+        & .car-item{
+            flex-direction: column;
+            & .vehicle-image{
+                width: 12.9rem;
+                height: 7.9rem;
+            }
+        }
+        & .car-item-details{
+            width: 12.9rem;
+            padding:0.625rem;
+        }
+    }
 
-  
+    /* for vehicle Items */
+    .car-item{
+        flex-direction: column;
+        & .vehicle-image{
+            width: 12.9rem;
+            height: 7.9rem;
+        }
+        & .car-item-details{
+            display: flex;
+            flex-direction: column;
+            gap: 0.4rem;
+            width: 13rem;
+            height: 12rem;
+            padding:0.625rem;
+            & h3{
+                font-weight: 600;
+                font-size: 1rem;
+                color: #1A202C;
+            }
+            
+             & .car-item-description{
+                font-size: 0.75rem;
+                line-height: 1.15rem;
+             }
+        }
+        & .car-item-pricing{
+            flex-direction: column;
+            gap: 0.4rem;
+            align-items: start;
+            & button{
+                width: 8rem;
+                height: 2.375rem;
+                background-color: var(--primary-Color);
+                color: white;
+                border-radius: 0.25rem;
+            }
+            & .car-item-price{
+                font-size: 1rem;
+                font-weight: 600;
+            }
+        }
+    }
+    
+    
+    
 }

@@ -15,7 +15,7 @@
         <img
           src="./images/Social-Media-Icons.svg"
           width="90"
-          alt=""
+          alt="Social Media Icons Group"
           class="socialMediaIcons-group pointer"
         />
         <div class="navigation-header">
@@ -50,7 +50,7 @@
             <a href=""
               ><img
                 src="./images/Person.svg"
-                alt=""
+                alt="Logged In Person"
                 class="login-indicator"
                 width="98"
             /></a>
@@ -59,7 +59,7 @@
           <div class="side-bar">
             <img
               src="./icons/Close-Icon.svg"
-              alt=""
+              alt="Close Icon For Side Bar"
               id="closeButtonIcon"
               width="24"
               height="24"
@@ -72,7 +72,7 @@
               <a href="">Locations</a>
               <a href="">Contact Us</a>
               <button class="loginSignUpButton">
-                <img src="./images/Person.svg" alt="" />
+                <img src="./images/LoginButton.svg" alt="Login button" />
               </button>
             </div>
           </div>
@@ -173,22 +173,73 @@
 
     </header>
 <!-- From Here All the Desigin Are Mentioned in the Main.css Files -->
+
     <main >
-            <section class="car-booking-actions ">
-                    <button id="bookCar-button" >Book a Car</button>
-                    <button id="quickBook-button">Quick Book</button>
-            </section>
+        <section class="car-booking-actionss ">
+            <button id="bookCar-button"  class="pointer">Book a Car</button>
+            <button id="quickBook-button" class="pointer">Quick Book</button>
+    </section>
+
 
             <section class="onlyForMobileView">
             </section>
             <section class="banner-container">
                  <div class="offer-details-container">
-                    <p>Recieve guarnteed on a monthly hire or lease</p>
+                    <p>Recieve guarnteed <br> on a monthly hire or lease</p>
                     <button class="border-0">GIFT VOUCHER</button>
                  </div>
+                 <img src="./icons/three-dots.svg" alt="carousel-navigator-icons" width="60" height="9" class="carousel-navigator">
             </section>
+
+    <section class=" popular-cars-section">
+    <h2>Most Popular Cars</h2>
+    <!-- Horizontal Scroll -->
+    <div class="popular-cars-scroll-container">
+           <div class="car-item">
+             <img src="./images/scoll-bar-image1.png" width="360" height="290" alt="Mitusbhi Car" class="vehicle-image">
+             <div class="car-item-details">
+                <h3>Mitsubishi Eclipse</h3>
+                <p class="car-item-description">Eclipse Cross is a fusion of sharp coupe looks and dynamic SUV mobility with signature Mitsubishi styling, technology and driving confidence.</p>
+                <img src="./images/Vehicle-Details.svg" height="17" alt="" class="vehicle-info">
+                  <div class="car-item-pricing">
+                     <p class="car-item-price"> AED 2700/Monthly</p>
+                     <button class="car-item-button border-0">Book Now</button>
+                  </div>
+             </div>
+           </div>
+           <div class="car-item">
+            <img src="./images/scoll-bar-image1.png" alt="Vehichle Image" class="vehicle-image">
+            <div  class="car-item-details">
+               <h3>Mitsubishi Eclipse</h3>
+               <p class="car-item-description">Eclipse Cross is a fusion of sharp coupe looks and dynamic SUV mobility with signature Mitsubishi styling, technology and driving confidence.</p>
+
+               <img src="./images/Vehicle-Details.svg" height="17" alt="Vehicle Detail Image" class="vehicle-info">
+
+                 <div class="car-item-pricing">
+                    <p  class="car-item-price"> AED 2700/Monthly</p>
+                    <button class="border-0">Book Now</button>
+                 </div>
+            </div>
+          </div>
+          <div class="car-item">
+            <img src="./images/scoll-bar-image1.png" width="360" height="290" alt="Mitusbhi Car" class="vehicle-image">
+            <div class="car-item-details">
+               <h3>Mitsubishi Eclipse</h3>
+               <p class="car-item-description">Eclipse Cross is a fusion of sharp coupe looks and dynamic SUV mobility with signature Mitsubishi styling, technology and driving confidence.</p>
+               <img src="./images/Vehicle-Details.svg" height="17" alt="" class="vehicle-info">
+                 <div class="car-item-pricing">
+                    <p class="car-item-price"> AED 2700/Monthly</p>
+                    <button class="border-0">Book Now</button>
+                 </div>
+            </div>
+          </div>
+    </div>
+    </section>
+
+    
     </main>
     <script src="./navigation.js"></script>
     <script src="./BookService.js"></script>
+    <script src="./Resize.js"></script>
   </body>
 </html>
