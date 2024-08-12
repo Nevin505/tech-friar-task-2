@@ -1,7 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
 *{
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;
+    font-family: 'Poppins';
+
 }
 :root{
     --inlinePaddingDesktop:4rem;
@@ -34,6 +38,12 @@ main{
     padding-inline: var(--inlinePaddingDesktop);
     position: relative;
     overflow: hidden;   
+}
+
+input[type="datetime-local"]::-webkit-inner-spin-button,
+input[type="datetime-local"]::-webkit-calendar-picker-indicator {
+    display: none;
+    -webkit-appearance: none;
 }
 /* Desigin for the Quick Action Button */
 .car-booking-actionss{
@@ -122,6 +132,7 @@ main{
     height: 24rem;
     & h2{
         padding: 1.8rem;
+        font-weight: 400;
     }
 }
 
@@ -141,10 +152,12 @@ main{
     display: flex;
     & .vehicle-image{
         display: block;
+      
     }
     & .car-item-details{
         display: flex;
         flex-direction: column;
+        gap: 0.625rem;
         justify-content:space-evenly;
         width: 24.625rem;
         padding:1.5rem 2.5rem;
@@ -160,9 +173,24 @@ main{
             line-height: 1.15rem;
          }
     }
+
+    & .vehicle-info{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 1.5rem;
+        font-size: 0.62rem;
+        overflow: hidden;
+        & div{
+             display: flex;
+             align-items: center;
+             gap: 0.5rem;
+        }
+    }
     & .car-item-pricing{
         display: flex;
         justify-content: space-between;
+        gap: 0.625rem;
         align-items: center;
         & button{
             width: 6rem;
@@ -179,6 +207,91 @@ main{
 }
 
 
+/* exclusive-offer-section Design and links to download the app */
+.exclusive-offer-section{
+    display: flex;
+    padding-top: 2.5rem;
+    padding-left: 4.8rem;
+    gap: 2rem;
+/* First Div Placed Inside the parent div */
+    & .subscription-content{
+        flex: 1 ;
+        display: flex;
+        flex-direction: column;
+        gap: 0.8rem;
+        max-width: 30rem;
+        /* Child inside subscription-content */
+        & .subscription-heading{
+            font-style: 2.1rem;
+            font-weight: 400;
+        }
+          /* Child inside subscription-content */
+        & .user-info-container{
+            max-width: 26rem;
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+    }
+/*Second Div Placed Inside the parent div-- app-download-content */
+    & .app-download-content{
+            flex: 1 ;
+            display: flex;
+            padding: 1.5rem  3.75rem;
+            justify-content: space-evenly;
+            gap: 1.5rem;
+            background-color: var(--primary-Color);
+
+          & .download-info{
+            /* width: 17rem; */
+            display: flex;
+            gap: 1.4rem;
+            flex-direction: column;
+            margin: auto 0;
+
+            & p{
+                color: white;
+                font-size: 0.875rem;
+            }
+
+            & button{
+                width: fit-content;
+                padding: 0.5rem 1rem;
+                background-color: black;
+                border-radius: 0.5rem;
+                color: white;
+            }
+          }
+    }
+}
+
+
+.user-info-container>.user-input-boxes{
+    display: flex;
+    gap: 0.4rem;
+    flex-wrap: wrap;
+     & input{
+        flex: 1;
+        width: 13rem;
+        background-color: #F8F8F8;
+        height: 2.25rem;
+        padding: 0.2rem 0.4rem;
+     }
+}    
+.download-info> input{
+    background-color: white;
+    height: 2.8rem;
+    padding: 0.2rem 0.2rem;
+}
+    
+/* Styling the button Present inside  user-info-container Class */
+.user-info-container>.subscription-button{
+    flex: 1;
+    height: 3.56rem;
+    background-color: var(--primary-Color);
+    padding: 0.6rem 0;
+    border-radius: 0.3rem;
+}
 
 /* Resposnive Design */
 @media(max-width:835px){
@@ -229,7 +342,8 @@ main{
     }
     /* For cart List */
     .popular-cars-section{
-        height: 25rem;
+        height: 26rem;
+        /* border: 2px solid green; */
         & .car-item{
             flex-direction: column;
             & .vehicle-image{
@@ -239,6 +353,7 @@ main{
         }
         & .car-item-details{
             width: 12.9rem;
+            /* height: 12.9rem; */
             padding:0.625rem;
         }
     }
@@ -251,8 +366,10 @@ main{
             height: 7.9rem;
         }
         & .car-item-details{
+            border: 2px solid blue;
             display: flex;
             flex-direction: column;
+            height:13.8rem ;
             gap: 0.4rem;
             width: 13rem;
             height: 12rem;
@@ -266,6 +383,9 @@ main{
              & .car-item-description{
                 font-size: 0.75rem;
                 line-height: 1.15rem;
+                 color: #000000BF;
+                 opacity: 75%;
+
              }
         }
         & .car-item-pricing{
@@ -280,12 +400,21 @@ main{
                 border-radius: 0.25rem;
             }
             & .car-item-price{
-                font-size: 1rem;
+                font-size: 0.8rem;
                 font-weight: 600;
             }
         }
     }
     
-    
-    
+    /* Resposnive Desigin  exclusive-offer-section Design and links to download the app */
+.exclusive-offer-section {
+    flex-direction: column;
+    padding-left: 0;
+}
+.subscription-heading{
+    font-size: 1rem;
+    max-width: 14rem;
+}
+
+
 }

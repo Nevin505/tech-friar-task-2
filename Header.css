@@ -170,7 +170,7 @@ position: relative;
 & .calender-icon{
    position: absolute;
    left: 0.8rem;
-   top: 32%;
+   top: 38%;
 }
 & input{
     width: 100%;
@@ -184,7 +184,7 @@ position: relative;
     & .calender-icon{
        position: absolute;
        left: 0.8rem;
-       top: 32%;
+       top: 38%;
     }   
     & input{
         width: 100%;

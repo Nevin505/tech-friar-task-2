@@ -112,7 +112,7 @@
               class="pickup-location-icon"
             />
           </div>
-
+<!-- Only Visible when the user Selects a different pick up location -->
           <div class="userLocation-container  dropLocation">
             <select id="" class="bookLocation inputCalenderbox border-0">
               <option value="alQuoz">Al Quoz</option>
@@ -127,7 +127,7 @@
 
           <!--User Vehicle-pickup-date-input-container including the calender icon on the start -->
           <div class="vehicle-pickup-date-input-container">
-            <input type="datetime-local" class="inputCalenderbox border-0" />
+            <input type="datetime-local" class="inputCalenderbox border-0" value="2018-06-12T19:30"/>
             <img
               src="./icons/calender.svg"
               alt="calender-icon"
@@ -137,7 +137,7 @@
 
           <!--User Vehicleend-date-input-container including the calender icon on the start -->
           <div class="vehicle-end-date-input-container">
-            <input type="datetime-local" class="inputCalenderbox border-0" />
+            <input type="datetime-local" class="inputCalenderbox border-0" value="2018-06-12T19:30" />
             <img
               src="./icons/calender.svg"
               alt="calender-icon"
@@ -191,7 +191,7 @@
                  <img src="./icons/three-dots.svg" alt="carousel-navigator-icons" width="60" height="9" class="carousel-navigator">
             </section>
 
-    <section class=" popular-cars-section">
+    <section class="popular-cars-section">
     <h2>Most Popular Cars</h2>
     <!-- Horizontal Scroll -->
     <div class="popular-cars-scroll-container">
@@ -200,7 +200,26 @@
              <div class="car-item-details">
                 <h3>Mitsubishi Eclipse</h3>
                 <p class="car-item-description">Eclipse Cross is a fusion of sharp coupe looks and dynamic SUV mobility with signature Mitsubishi styling, technology and driving confidence.</p>
-                <img src="./images/Vehicle-Details.svg" height="17" alt="" class="vehicle-info">
+
+                <div class="vehicle-info">
+                    <!-- Each Items tells about the  Specification  of the Vehicle-->
+                    <div>
+                        <img src="./icons/Seating-Capacity.svg" width="12" height="15" alt="Seating-Capacity">
+                        <p>6 People</p>
+                    </div>
+                    <div>
+                        <img src="./icons/Vehicle-gear-type.svg" width="12" height="15" alt="Vehicle-gear-type">
+                         <p> Automatic</p>
+                    </div>
+                    <div>
+                        <img src="./icons/car-door.svg" width="12" height="15" alt="car-door">
+                        <p>5 Doors</p>
+                    </div>
+                    <div>
+                        <img src="./icons/air-conditioner.svg" width="12" height="15" alt="Air-conditioner">
+                       <p> AC</p>
+                    </div>
+                  </div>
                   <div class="car-item-pricing">
                      <p class="car-item-price"> AED 2700/Monthly</p>
                      <button class="car-item-button border-0">Book Now</button>
@@ -212,8 +231,26 @@
             <div  class="car-item-details">
                <h3>Mitsubishi Eclipse</h3>
                <p class="car-item-description">Eclipse Cross is a fusion of sharp coupe looks and dynamic SUV mobility with signature Mitsubishi styling, technology and driving confidence.</p>
-
-               <img src="./images/Vehicle-Details.svg" height="17" alt="Vehicle Detail Image" class="vehicle-info">
+            
+               <div class="vehicle-info">
+                <!-- Each Items tells about the  Specification  of the Vehicle-->
+                <div>
+                    <img src="./icons/Seating-Capacity.svg" width="12" height="15" alt="Seating-Capacity">
+                    <p>6 People</p>
+                </div>
+                <div>
+                    <img src="./icons/Vehicle-gear-type.svg" width="12" height="15" alt="Vehicle-gear-type">
+                     <p> Automatic</p>
+                </div>
+                <div>
+                    <img src="./icons/car-door.svg" width="12" height="15" alt="car-door">
+                    <p>5 Doors</p>
+                </div>
+                <div>
+                    <img src="./icons/air-conditioner.svg" width="12" height="15" alt="Air-conditioner">
+                   <p> AC</p>
+                </div>
+              </div>
 
                  <div class="car-item-pricing">
                     <p  class="car-item-price"> AED 2700/Monthly</p>
@@ -226,7 +263,27 @@
             <div class="car-item-details">
                <h3>Mitsubishi Eclipse</h3>
                <p class="car-item-description">Eclipse Cross is a fusion of sharp coupe looks and dynamic SUV mobility with signature Mitsubishi styling, technology and driving confidence.</p>
-               <img src="./images/Vehicle-Details.svg" height="17" alt="" class="vehicle-info">
+
+               <div class="vehicle-info">
+                <!-- Each Items tells about the  Specification  of the Vehicle-->
+                <div>
+                    <img src="./icons/Seating-Capacity.svg" width="12" height="15" alt="Seating-Capacity">
+                    <p>6 People</p>
+                </div>
+                <div>
+                    <img src="./icons/Vehicle-gear-type.svg" width="12" height="15" alt="Vehicle-gear-type">
+                     <p> Automatic</p>
+                </div>
+                <div>
+                    <img src="./icons/car-door.svg" width="12" height="15" alt="car-door">
+                    <p>5 Doors</p>
+                </div>
+                <div>
+                    <img src="./icons/air-conditioner.svg" width="12" height="15" alt="Air-conditioner">
+                   <p> AC</p>
+                </div>
+              </div>
+              
                  <div class="car-item-pricing">
                     <p class="car-item-price"> AED 2700/Monthly</p>
                     <button class="border-0">Book Now</button>
@@ -236,6 +293,38 @@
     </div>
     </section>
 
+
+    <!--Excuslive Offer Section  -->
+    <section class="exclusive-offer-section">
+         <!-- Container for the subscription content -->
+     <div class="subscription-content">
+        <h2 class="subscription-heading">Subscribe here for exclusive offers and updates!</h2>
+          <div class="user-info-container">
+              <div class="user-input-boxes">
+                <input type="text" placeholder="Name" class="border-0">
+                <input type="text" placeholder="Email" class="border-0">
+              </div>
+            <p  class="subscription-description">Don't miss out! enter your email and your name, then hit subscribe to unlock a world of special offers and details.</p>
+            <button class="subscription-button border-0 pointer">Subscribe</button>
+          </div>
+     </div>
+<!-- Container for the app download content -->
+     <div class="app-download-content">
+         <img src="./images/Rectangle.png" width="231" height="417" alt="">
+         <div class="download-info">
+            <p>Enter your number and receive 
+                a direct link to download the app</p>
+                <input type="text" placeholder="Enter phone number" class="border-0">
+                <button class="download-button border-0 pointer">Get The Link</button>
+                <p>Get in on</p>
+                <span>
+                    <img src="./icons/PlayStore-White-logo.svg" alt="PlayStore-White-logo">
+                    <img src="./icons/AppStore-white-logo.svg" alt="/AppStore-white-logo">
+                </span>
+         </div>
+
+     </div>
+    </section>
     
     </main>
     <script src="./navigation.js"></script>

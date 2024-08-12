@@ -13,6 +13,7 @@ window.addEventListener('resize',()=>{
 
 })
 
+
 if(window.innerWidth<=835)
     {
         const descriptionElements=document.getElementsByClassName('car-item-description');
