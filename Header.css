@@ -230,7 +230,7 @@ position: relative;
         background-size: contain;
     }
     & .appStore{       
-        background-image: url('./images/AppStore-Button.svg');        
+        background-image: url('./images/AppStore-Black.svg');        
     }
     & .playStore{     
         background-image: url('./images/BlackPlayStoreButton.svg');       

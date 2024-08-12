@@ -310,21 +310,66 @@
      </div>
 <!-- Container for the app download content -->
      <div class="app-download-content">
-         <img src="./images/Rectangle.png" width="231" height="417" alt="">
-         <div class="download-info">
-            <p>Enter your number and receive 
-                a direct link to download the app</p>
-                <input type="text" placeholder="Enter phone number" class="border-0">
+        <img src="./images/Rectangle.png" width="231" height="417" alt="">
+         <!-- Container for download-related information -->
+        <div class="download-info">
+            <!-- Text paragraph for download instruction -->
+             <p  id="download-instruction">Enter your number and receive  a direct link to download the app</p>
+                <!-- Container for phone number input and button -->
+               <div class="input-group" id="inputLink">
+                <input type="text" placeholder="Enter phone number" class=" border-0">
                 <button class="download-button border-0 pointer">Get The Link</button>
+               </div>
+                 <!-- Container for app store icons -->
+               <div  class="store-icons-container" id="icons">
                 <p>Get in on</p>
-                <span>
-                    <img src="./icons/PlayStore-White-logo.svg" alt="PlayStore-White-logo">
-                    <img src="./icons/AppStore-white-logo.svg" alt="/AppStore-white-logo">
-                </span>
-         </div>
+                <span id="store-icons" >
+                   <img src="./icons/PlayStore-White-logo.svg" alt="PlayStore-White-logo">
+                   <img src="./icons/AppStore-white-logo.svg" alt="/AppStore-white-logo">
+               </span>
+               </div>
+        </div>
 
-     </div>
+    </div>
     </section>
+<!-- Rent/Lease in Three easy steps -->
+    <Section class="rental-instructions">
+          <h2>Rent/Lease In three easy steps</h2>
+           <div class="steps-container">
+            
+            <div  class="step-item">
+                <h3 class="step-number">01</h3>
+                  <!-- Container for step details (icon + text) -->
+                  <div class="step-details">
+                       <!-- Icon representing the step -->
+                    <img src="./icons/Fading-Location.svg" alt="" srcset="">
+                        <!-- Text description for the step -->
+                    <p class="step-description">
+                        Select the location. Browse through our available options and find the perfect car to suit your needs
+                      </p>
+                  </div>
+            </div>
+
+            <div  class="step-item">
+              <h3 class="step-number">02</h3>
+              <div class="step-details">
+                   <!-- Icon representing the step -->
+                <img src="./icons/Fading-Calender.svg" alt="" srcset="">
+                    <!-- Text description for the step -->
+                <p class="step-description">Choose your desired Pick-Up date and time.</p>
+              </div>
+            </div>
+            <div  class="step-item">
+              <h3 class="step-number">03</h3>
+              <div class="step-details">
+                   <!-- Icon representing the step -->
+                <img src="./icons/Fading-Car-logo.svg" alt="" srcset="">
+                    <!-- Text description for the step -->
+                <p class="step-description">Make payment and book the car. Select an option to either have the car delivered to your location or pick it up directly from us.</p>
+              </div>
+            </div>
+           </div>
+    </Section>
     
     </main>
     <script src="./navigation.js"></script>

@@ -1,420 +1,524 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
 
-*{
-    margin: 0px;
-    padding: 0px;
-    box-sizing: border-box;
-    font-family: 'Poppins';
-
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  font-family: "Poppins";
 }
-:root{
-    --inlinePaddingDesktop:4rem;
-    --inlinePaddingSmallerDevice:1.25rem;
-    --primary-Color:#E21E26;
-    --button-primary:var(--primary-Color)
+:root {
+  --inlinePaddingDesktop: 3.5rem;
+  --inlinePaddingSmallerDevice: 1.25rem;
+  --primary-Color: #e21e26;
+  --button-primary: var(--primary-Color);
 }
 /* Common Styles */
 
-a, a:active, a:focus {
-    outline: none;
- }
-
- button:focus {
-    outline: none;
+button:focus {
+  outline: none;
 }
-.border-0{
-    border: none;
+.border-0 {
+  border: none;
 }
-.pointer{
-cursor: pointer;
+.pointer {
+  cursor: pointer;
 }
-a, a:active, a:focus {
-    outline: none;
- }
-main{
-    max-width:90rem;
-    margin: 0 auto; 
-    /* border: yellow 1px solid; */
-    padding-inline: var(--inlinePaddingDesktop);
-    position: relative;
-    overflow: hidden;   
+a,
+a:active,
+a:focus {
+  outline: none;
+}
+main {
+  max-width: 90rem;
+  margin: 0 auto;
+  /* border: yellow 1px solid; */
+  padding-inline: var(--inlinePaddingDesktop);
+  position: relative;
+  overflow: hidden;
 }
 
 input[type="datetime-local"]::-webkit-inner-spin-button,
 input[type="datetime-local"]::-webkit-calendar-picker-indicator {
-    display: none;
-    -webkit-appearance: none;
+  display: none;
+  -webkit-appearance: none;
 }
 /* Desigin for the Quick Action Button */
-.car-booking-actionss{
-    display: none;
-    justify-content: space-between;
-    gap: 0.8rem;
-    margin-top: 1rem;
-    & button{
-        flex: 1;
-        padding: 1rem 1.75rem;
-        border-radius: 0.25rem;
-    }
-    #bookCar-button{
-        background-color: var(--primary-Color);
-        border: 1px white solid;
-        color: white;
-        outline:none;
-        outline: 0;
-    }
-    #quickBook-button{
-        background-color:white;
-        border: 1px var(--primary-Color) solid;
-        color: var(--primary-Color);
-        outline:none;
-
-    }
+.car-booking-actionss {
+  display: none;
+  justify-content: space-between;
+  gap: 0.8rem;
+  margin-top: 1rem;
+  & button {
+    flex: 1;
+    padding: 1rem 1.75rem;
+    border-radius: 0.25rem;
+  }
+  #bookCar-button {
+    background-color: var(--primary-Color);
+    border: 1px white solid;
+    color: white;
+    outline: none;
+    outline: 0;
+  }
+  #quickBook-button {
+    background-color: white;
+    border: 1px var(--primary-Color) solid;
+    color: var(--primary-Color);
+    outline: none;
+  }
 }
 
-.onlyForMobileView{
-    display: none;
+.onlyForMobileView {
+  display: none;
 }
 
-  /* Banner-Conatiner Section Style */
-  .banner-container{
-    position: relative;
-    padding:12.25rem 12.25rem;
-    background-image: url('./images/2018-Mitsubishi-ASX-1920x966\ 1.png');
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    margin-top: 0.5rem;
-    & p{
-        color: white;
-    }
+/* Banner-Conatiner Section Style */
+.banner-container {
+  position: relative;
+  padding: 12.25rem 12.25rem;
+  background-image: url("./images/2018-Mitsubishi-ASX-1920x966\ 1.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  margin-top: 0.5rem;
+  & p {
+    color: white;
+  }
 }
 /* Banner-Section Content */
-.offer-details-container{
-    position: absolute;
-    width: 27.687rem;
-    display: flex;
-    gap: 0.8rem;
-    height: 3.625rem;
-    left: 38%;
-    bottom: 18%;
-   text-align: start;
-   & p{
+.offer-details-container {
+  position: absolute;
+  width: 27.687rem;
+  display: flex;
+  gap: 0.8rem;
+  height: 3.625rem;
+  left: 38%;
+  bottom: 18%;
+  text-align: start;
+  & p {
     line-height: 1.65rem;
     font-weight: 400;
-   }
-    & button{
-        width: 9.5rem;
-        height: 1.9rem;
-        padding: 0.33rem  1rem;
-        margin-left: -3.5rem;
-        font-size: smaller;
-        border-radius: 1rem;
-        font-size: 0.6rem;
-        font-weight: 600;
-        color: white;
-        background-color: #009046;;
-    }
+  }
+  & button {
+    width: 9.5rem;
+    height: 1.9rem;
+    padding: 0.33rem 1rem;
+    margin-left: -3.5rem;
+    font-size: smaller;
+    border-radius: 1rem;
+    font-size: 0.6rem;
+    font-weight: 600;
+    color: white;
+    background-color: #009046;
+  }
 }
 
 /* Carousel Containers */
-.carousel-navigator{
-    position: absolute;
-    left: 35rem;
-    bottom: 1.875rem;
+.carousel-navigator {
+  position: absolute;
+  left: 35rem;
+  bottom: 1.875rem;
 }
 
-.popular-cars-section{
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    height: 24rem;
-    & h2{
-        padding: 1.8rem;
-        font-weight: 400;
-    }
+.popular-cars-section {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 24rem;
+  & h2 {
+    padding: 1.8rem;
+    font-weight: 400;
+  }
 }
 
 /* Horizontal Scroll Bar Desigin */
-.popular-cars-scroll-container{
-    overflow-x: scroll;
-    display: flex;
-    gap:1.375rem;
-    position: absolute;
-    left: 0rem;
-    right: -4rem;
-    bottom: 0;
-    scrollbar-width: none;
+.popular-cars-scroll-container {
+  overflow-x: scroll;
+  display: flex;
+  gap: 1.375rem;
+  position: absolute;
+  left: 0rem;
+  right: -4rem;
+  bottom: 0;
+  scrollbar-width: none;
 }
 /* Each Card Item Present inside of the Horizontal ScrollBar  and the whole styles appiled to that card*/
-.car-item{
+.car-item {
+  display: flex;
+  & .vehicle-image {
+    display: block;
+  }
+  & .car-item-details {
     display: flex;
-    & .vehicle-image{
-        display: block;
-      
+    flex-direction: column;
+    gap: 0.625rem;
+    justify-content: space-evenly;
+    width: 24.625rem;
+    padding: 1.5rem 2.5rem;
+    border: 1px solid #d9d9d9;
+    & h3 {
+      font-weight: 500;
+      font-size: 1.675rem;
+      color: #1a202c;
     }
-    & .car-item-details{
+
+    & .car-item-description {
+      font-size: 0.75rem;
+      line-height: 1.15rem;
+    }
+  }
+
+  & .vehicle-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1.5rem;
+    font-size: 0.62rem;
+    overflow: hidden;
+    & div {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+  }
+  & .car-item-pricing {
+    display: flex;
+    justify-content: space-between;
+    gap: 0.625rem;
+    align-items: center;
+    & button {
+      width: 6rem;
+      height: 2.25rem;
+      background-color: var(--primary-Color);
+      color: white;
+      border-radius: 0.25rem;
+    }
+    & .car-item-price {
+      font-size: 1rem;
+      font-weight: 600;
+    }
+  }
+}
+
+/* exclusive-offer-section Design and links to download the app */
+.exclusive-offer-section {
+  display: flex;
+  padding-top: 2.5rem;
+  padding-left: 4.4rem;
+  gap: 2rem;
+  /* First Div Placed Inside the parent div */
+}
+
+.exclusive-offer-section > .subscription-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+  max-width: 30rem;
+  padding-top: 2.3rem;
+  /* Child inside subscription-content */
+  & .subscription-heading {
+    font-style: 2.1rem;
+    font-weight: 400;
+  }
+  /* Child inside subscription-content */
+  & .user-info-container {
+    max-width: 26rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+}
+
+.app-download-content {
+  position: relative;
+  flex: 1;
+  display: flex;
+  padding: 1.5rem 3.6rem;
+  justify-content: space-evenly;
+  gap: 1.5rem;
+  background-color: var(--primary-Color);
+}
+
+.app-download-content > .download-info {
+  display: flex;
+  gap: 1.6rem;
+  padding: 0.4rem;
+  flex-direction: column;
+  margin: auto 0;
+  & button {
+    /* width: fit-content; */
+    padding: 0.5rem 1rem;
+    background-color: black;
+    border-radius: 0.5rem;
+    color: white;
+  }
+}
+
+.download-info > .input-group {
+  display: flex;
+  flex-direction: column;
+  gap: 1.4rem;
+  & input {
+    padding: 0.6rem 0.6rem;
+  }
+  & button {
+    width: fit-content;
+  }
+}
+
+#download-instruction {
+  color: white;
+  font-size: 0.875rem;
+}
+.user-info-container > .user-input-boxes {
+  display: flex;
+  gap: 0.4rem;
+  flex-wrap: wrap;
+  & input {
+    flex: 1;
+    width: 13rem;
+    background-color: #f8f8f8;
+    height: 2.25rem;
+    padding: 0.2rem 0.4rem;
+  }
+}
+
+.store-icons-container {
+  & p {
+    color: white;
+    padding-bottom: 0.6rem;
+  }
+}
+
+.download-info > input {
+  background-color: white;
+  height: 2.8rem;
+  padding: 0.2rem 0.2rem;
+}
+
+/* Styling the button Present inside  user-info-container Class */
+.user-info-container > .subscription-button {
+  flex: 1;
+  height: 3.56rem;
+  background-color: var(--primary-Color);
+  padding: 0.6rem 0;
+  border-radius: 0.3rem;
+}
+
+
+/* Styles for rent-lease-faqs-Section */
+.rental-instructions{
+    padding-top: 2.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2.5rem;
+    & h2{
+        font-size: 34px;
+        font-weight: 400;
+    }
+    }
+/* Container for all the Different guide to lease the vehicle */
+    .steps-container{
         display: flex;
+        justify-content: space-between;
+        gap: 3.125rem;
+        padding-inline:2.4rem ;
+    }
+    
+    /* Which Conatin a Single Steps for the Process*/
+    .step-item{
+        flex: 1;
+        display: flex;
+        height: 11.125rem;
         flex-direction: column;
-        gap: 0.625rem;
-        justify-content:space-evenly;
-        width: 24.625rem;
-        padding:1.5rem 2.5rem;
-        border: 1px solid #D9D9D9;
-        & h3{
-            font-weight: 500;
-            font-size: 1.675rem;
-            color: #1A202C;
-        }
-        
-         & .car-item-description{
-            font-size: 0.75rem;
-            line-height: 1.15rem;
+        justify-content: space-between;
+        align-items: center;
+         border: 1px solid blue;
+         padding: 1rem 4rem;
+         
+         & .step-number{
+            width: 4rem;
+            padding: 0.75rem;
+            border: 2px solid greenyellow;
+            text-align: center;
          }
     }
 
-    & .vehicle-info{
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        gap: 1.5rem;
-        font-size: 0.62rem;
-        overflow: hidden;
-        & div{
-             display: flex;
-             align-items: center;
-             gap: 0.5rem;
-        }
-    }
-    & .car-item-pricing{
-        display: flex;
-        justify-content: space-between;
-        gap: 0.625rem;
-        align-items: center;
-        & button{
-            width: 6rem;
-            height: 2.25rem;
-            background-color: var(--primary-Color);
-            color: white;
-            border-radius: 0.25rem;
-        }
-        & .car-item-price{
-            font-size: 1rem;
-            font-weight: 600;
-        }
-    }
-}
-
-
-/* exclusive-offer-section Design and links to download the app */
-.exclusive-offer-section{
-    display: flex;
-    padding-top: 2.5rem;
-    padding-left: 4.8rem;
-    gap: 2rem;
-/* First Div Placed Inside the parent div */
-    & .subscription-content{
-        flex: 1 ;
-        display: flex;
-        flex-direction: column;
-        gap: 0.8rem;
-        max-width: 30rem;
-        /* Child inside subscription-content */
-        & .subscription-heading{
-            font-style: 2.1rem;
-            font-weight: 400;
-        }
-          /* Child inside subscription-content */
-        & .user-info-container{
-            max-width: 26rem;
-            display: flex;
-            flex-direction: column;
-            gap: 1rem;
-        }
-    }
-/*Second Div Placed Inside the parent div-- app-download-content */
-    & .app-download-content{
-            flex: 1 ;
-            display: flex;
-            padding: 1.5rem  3.75rem;
-            justify-content: space-evenly;
-            gap: 1.5rem;
-            background-color: var(--primary-Color);
-
-          & .download-info{
-            /* width: 17rem; */
-            display: flex;
-            gap: 1.4rem;
-            flex-direction: column;
-            margin: auto 0;
-
-            & p{
-                color: white;
-                font-size: 0.875rem;
+    /* "step-details */
+    .step-details{
+            font-size: 0.875rem;
+            border: 1px yellow solid;
+            & img{
+                display: block;
+                margin: 0 auto;
             }
-
-            & button{
-                width: fit-content;
-                padding: 0.5rem 1rem;
-                background-color: black;
-                border-radius: 0.5rem;
-                color: white;
-            }
-          }
     }
-}
-
-
-.user-info-container>.user-input-boxes{
-    display: flex;
-    gap: 0.4rem;
-    flex-wrap: wrap;
-     & input{
-        flex: 1;
-        width: 13rem;
-        background-color: #F8F8F8;
-        height: 2.25rem;
-        padding: 0.2rem 0.4rem;
-     }
-}    
-.download-info> input{
-    background-color: white;
-    height: 2.8rem;
-    padding: 0.2rem 0.2rem;
-}
-    
-/* Styling the button Present inside  user-info-container Class */
-.user-info-container>.subscription-button{
-    flex: 1;
-    height: 3.56rem;
-    background-color: var(--primary-Color);
-    padding: 0.6rem 0;
-    border-radius: 0.3rem;
-}
 
 /* Resposnive Design */
-@media(max-width:835px){
+@media (max-width: 835px) {
+  main {
+    padding-inline: var(--inlinePaddingSmallerDevice);
+  }
+  .car-booking-actionss {
+    display: flex;
+  }
+  .visbleBookOptions {
+    display: flex;
+    flex: 1;
+  }
+  .onlyForMobileView {
+    display: flex;
+    flex-direction: column;
+    padding-top: 1rem;
+    justify-content: space-between;
+  }
 
-    main{
-        padding-inline: var(--inlinePaddingSmallerDevice);
-    }
-    .car-booking-actionss{
-        display: flex;
-    }
-    .visbleBookOptions{
-        display: flex;
-        flex: 1;
-    }
-    .onlyForMobileView{
-        display: flex;
-        flex-direction: column;
-        padding-top: 1rem;
-        justify-content: space-between;
-    }
-   
-    .banner-container{
-         margin-top: 1rem;
-        padding:6.75rem;
-        background-size: cover;
-        background-position: center ;
-        margin-inline: -2.5rem;
-    }
-    /* Mobile View Offer Details */
-.offer-details-container{
+  .banner-container {
+    margin-top: 1rem;
+    padding: 6.75rem;
+    background-size: cover;
+    background-position: center;
+    margin-inline: -2.5rem;
+  }
+  /* Mobile View Offer Details */
+  .offer-details-container {
     width: 18.75rem;
     height: 1.96rem;
     left: 28%;
     bottom: 3.31rem;
-    & button{
-        width: 5.06rem;
-        height: 1.049rem;
-        font-size: 0.5075rem;
-        border-radius: 0;
-        padding: 0rem  0.66rem;
-        
+    & button {
+      width: 5.06rem;
+      height: 1.049rem;
+      font-size: 0.5075rem;
+      border-radius: 0;
+      padding: 0rem 0.66rem;
     }
+  }
+  .carousel-navigator {
+    position: absolute;
+    left: 40%;
+    bottom: 1.175rem;
+  }
+  /* For cart List */
+  .popular-cars-section {
+    height: 26rem;
+    & .car-item {
+      flex-direction: column;
+      & .vehicle-image {
+        width: 12.9rem;
+        height: 7.9rem;
+      }
     }
-    .carousel-navigator{
-        position: absolute;
-        left: 40%;
-        bottom: 1.175rem;
+    & .car-item-details {
+      width: 12.9rem;
+      padding: 0.625rem;
     }
-    /* For cart List */
-    .popular-cars-section{
-        height: 26rem;
-        /* border: 2px solid green; */
-        & .car-item{
-            flex-direction: column;
-            & .vehicle-image{
-                width: 12.9rem;
-                height: 7.9rem;
-            }
-        }
-        & .car-item-details{
-            width: 12.9rem;
-            /* height: 12.9rem; */
-            padding:0.625rem;
-        }
-    }
+  }
 
-    /* for vehicle Items */
-    .car-item{
-        flex-direction: column;
-        & .vehicle-image{
-            width: 12.9rem;
-            height: 7.9rem;
-        }
-        & .car-item-details{
-            border: 2px solid blue;
-            display: flex;
-            flex-direction: column;
-            height:13.8rem ;
-            gap: 0.4rem;
-            width: 13rem;
-            height: 12rem;
-            padding:0.625rem;
-            & h3{
-                font-weight: 600;
-                font-size: 1rem;
-                color: #1A202C;
-            }
-            
-             & .car-item-description{
-                font-size: 0.75rem;
-                line-height: 1.15rem;
-                 color: #000000BF;
-                 opacity: 75%;
-
-             }
-        }
-        & .car-item-pricing{
-            flex-direction: column;
-            gap: 0.4rem;
-            align-items: start;
-            & button{
-                width: 8rem;
-                height: 2.375rem;
-                background-color: var(--primary-Color);
-                color: white;
-                border-radius: 0.25rem;
-            }
-            & .car-item-price{
-                font-size: 0.8rem;
-                font-weight: 600;
-            }
-        }
+  /* for vehicle Items */
+  .car-item {
+    flex-direction: column;
+    & .vehicle-image {
+      width: 12.9rem;
+      height: 7.9rem;
     }
-    
-    /* Resposnive Desigin  exclusive-offer-section Design and links to download the app */
-.exclusive-offer-section {
+    & .car-item-details {
+      border: 2px solid blue;
+      display: flex;
+      flex-direction: column;
+      height: 13.8rem;
+      gap: 0.4rem;
+      width: 13rem;
+      height: 12rem;
+      padding: 0.625rem;
+      & h3 {
+        font-weight: 600;
+        font-size: 1rem;
+        color: #1a202c;
+      }
+
+      & .car-item-description {
+        font-size: 0.75rem;
+        line-height: 1.15rem;
+        color: #000000bf;
+        opacity: 75%;
+      }
+    }
+    & .car-item-pricing {
+      flex-direction: column;
+      gap: 0.4rem;
+      align-items: start;
+      & button {
+        width: 8rem;
+        height: 2.375rem;
+        background-color: var(--primary-Color);
+        color: white;
+        border-radius: 0.25rem;
+      }
+      & .car-item-price {
+        font-size: 0.8rem;
+        font-weight: 600;
+      }
+    }
+  }
+
+  /* Resposnive Desigin  exclusive-offer-section Design and links to download the app */
+  .exclusive-offer-section {
     flex-direction: column;
     padding-left: 0;
-}
-.subscription-heading{
+  }
+  .subscription-heading {
     font-size: 1rem;
     max-width: 14rem;
+  }
+
+  /* exclusive-offer-section Design and links to download the app */
+
+  .app-download-content {
+    padding: 0rem;
+    gap: 0.9rem;
+    padding-bottom: 4rem;
+  }
+  .app-download-content > img {
+    width: 8.5rem;
+    height: 15rem;
+    padding-bottom: 1rem;
+  }
+
+  .exclusive-offer-section>.subscription-content{
+  padding-top: 1.5rem;
+  gap: 1rem;
+
+    }
+
+.app-download-content > .download-info{
+  gap: 0.8rem;
 }
+  /* Changing the Order of  the Elements */
+  #download-instruction {
+    order: 2;
+  }
+  #store-icons {
+    order: 1;
+  }
+  #inputLink {
+    order: 3;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+    bottom: 0;
+    right: 2%;
+    left: 2%;
+  }
 
-
+  /* steps-container Desigin */
+  .steps-container{
+    flex-direction: column;
+    padding: 0rem;
+  }
 }
