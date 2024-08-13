@@ -80,6 +80,13 @@ footer{
 
 .follow-us-container{
 text-align: center;
+& div{
+    display: flex;
+    padding-block: 1rem;
+}
+& img{
+    display: block;
+}
 }
 
 /* To Alter the Background Color of The Icon Images */
@@ -90,7 +97,7 @@ text-align: center;
 .sub-companies{
   color: white;
   padding-block: 0.8rem 0;
- 
+  text-align: center;
 }
 .parent-company{
     text-align: center;
@@ -119,7 +126,13 @@ text-align: center;
     color: white;
     padding-block: 0.75rem;
 }
+.secure-Lock{
+    display: none;
+}
 
+#secure-Lock-small{
+    display:block;
+}
 /* branch-location-contanier Section Design */
 @media (max-width: 835px) {
     .branch-location-contanier{
@@ -187,6 +200,13 @@ text-align: center;
 .copyright-content{
     background-color: black;
     color: white;
+}
+
+.secure-Lock{
+    display: inline;
+}
+#secure-Lock-small{
+    display: none;
 }
 }
 /* To Alter the Background Color of The Icon Images */
