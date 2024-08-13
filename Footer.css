@@ -20,91 +20,17 @@ cursor: pointer;
 }
 
 footer{
-    padding-inline: var(--inlinePaddingDesktop);
-    /* padding-top: 3.5rem; */
+    padding-block: var(--inlinePaddingDesktop) 0;
 }
-/* .branch-location-contanier{
-    background-color: black;
-    color: white;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    gap: 4.8rem;
-    padding: 3.5rem 6.25rem;
-    & h2{
-        margin: 0 auto;
-    }
-} */
-/* .location-list{
-    flex: 1;
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    gap: 0.625rem;
-    & span:last-child{
-        border: none;
-    }
-}
-.location-item{
-    color:white;
-    font-size: 1.12rem;
-    font-weight: 400;
-    font-family: sans-serif;
-    padding-right: 5rem;
-    border-right: 1px white solid;
-    margin: 0 auto;
-    text-align: center;
-} */
 
-/* frequently-asked-questions Container */
-/* .frequently-asked-questions{
-    & h2{
-        font-size: 2.125rem  2.125rem;
-        font-weight: 400;
-        text-align: center;
-        padding-block:3.5rem 4rem;
-  }
-} */
-/* .accordian-item{
-    border-bottom: 0.18rem solid rgba(205, 214, 218, 0.25);
-} */
-/* Acccorfian Styles */
-/* .accordian-button{
-    width: 100%;
-  padding-block: 1rem;
-  background-color: white;
-  text-align: start;
-  position: relative;
-} */
-/* Rotate the close button */
-/* .accordian-button::after{
-    content: url('./icons/xmark.svg');
-    position: absolute;
-    right: 0;
-    transform: rotate(45deg);
-} */
-.accordian-button.active::after {
-    content: url('./icons/xmark.svg'); /* Change to another icon */
-}
-/* 
-.accordian-content{
-    display: none;
-    padding-block:1.5rem ;
-    font-size: 0.875rem;
-    opacity: 50%;
-} */
 /* company-profile-section Design Styles*/
 
 .company-profile-section{
-    position: absolute;
+    position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
-    /* padding: 2.5rem; */
     background-color: black;
-    left: 0;
-    right: 0;
-    border: 2px green solid;
 }
 
 .contact-section-container{
@@ -163,13 +89,18 @@ text-align: center;
 }
 .sub-companies{
   color: white;
+  padding-block: 0.8rem 0;
+ 
+}
+.parent-company{
+    text-align: center;
 }
 .subCompanies-Container{
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     gap: 1.37rem;
-    padding-top: 1rem;
+    padding-block: 1rem 2.25rem;
     & a{
         width: fit-content;
         font-size: 0.8rem;
@@ -179,11 +110,18 @@ text-align: center;
     }
 }
 
+.copyright-content{
+    width: 100%;
+    text-align: center;
+    font-size: 0.75rem;
+    font-weight: 500;
+    border-top: 0.1rem solid rgba(255, 255, 255, 1);
+    color: white;
+    padding-block: 0.75rem;
+}
+
 /* branch-location-contanier Section Design */
 @media (max-width: 835px) {
-    footer{
-      padding-inline: var(--inlinePaddingSmallerDevice);
-    }
     .branch-location-contanier{
         padding: 1rem;
         gap: 1.56rem;    
@@ -194,24 +132,8 @@ text-align: center;
         font-size: 0.87rem;
 
     }
-    /* .accordian-button{
-        font-weight: 500;
-    }
-    .accordian-content{
-        opacity: 80%;
-        padding-block: 1rem;
-    }
-    .frequently-asked-questions{
-        & h2{
-            font-size: 1rem;
-            font-weight: 400;
-            text-align: center;
-            padding-block:1rem;
-      }
-    } */
-
     .company-profile-section{
-        padding-inline: 1rem;
+        /* padding-inline: 1rem; */
         background-color: white;
     }
 
@@ -227,9 +149,8 @@ text-align: center;
     }
     
 .contact-section-container{
-    position: relative;
     flex-direction: column;
-    padding-block: 1.5rem;
+    padding: 1.5rem;
     background-color: white;
 }
 .footer-navigation-desktop{
@@ -237,17 +158,16 @@ text-align: center;
 }
 .footer-navigation-mobile{
     display: flex;
+    justify-content: center;
     flex-wrap: wrap;
-    /* justify-content: center; */
     gap:1rem;
-    padding-inline: 1.5rem;
+    padding-inline: 2.5rem;
     & a{
         color: black;
         text-decoration: none;
         font-size: 0.8rem;
         font-weight: 500;
     }
-    /* color: black; */
 }
 .footer-nav-main,.footer-nav-offers,.footer-nav-legal,.footer-nav-careers{
     flex-direction: row;
@@ -259,14 +179,14 @@ text-align: center;
     right: 4%;
     color: black;
 }
-
 .sub-companies{
-    position: absolute;
-    bottom: 0;
-    left:0;
-    right: 0;
+    width: 100%;
     background-color: black;
 
+}
+.copyright-content{
+    background-color: black;
+    color: white;
 }
 }
 /* To Alter the Background Color of The Icon Images */
