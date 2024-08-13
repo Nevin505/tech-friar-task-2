@@ -411,6 +411,9 @@ position: relative;
     align-items: center;
     text-align: center;
     margin: 0 auto;
+    & p{
+        font-size: 0.8rem;
+    }
    }
 /* Hide the Serach class */
    .search-glass{

@@ -217,6 +217,7 @@ input[type="datetime-local"]::-webkit-calendar-picker-indicator {
   gap: 2.5rem;
   max-width: 30rem;
   padding-top: 2.3rem;
+  border: 2px solid yellow;
   /* Child inside subscription-content */
   & .subscription-heading {
     font-style: 2.1rem;
@@ -235,7 +236,7 @@ input[type="datetime-local"]::-webkit-calendar-picker-indicator {
   position: relative;
   flex: 1;
   display: flex;
-  padding: 1.5rem 3.6rem;
+  padding: 1.5rem 2.6rem;
   justify-content: space-evenly;
   gap: 1.5rem;
   background-color: var(--primary-Color);
@@ -310,7 +311,7 @@ input[type="datetime-local"]::-webkit-calendar-picker-indicator {
 
 /* Styles for rent-lease-faqs-Section */
 .rental-instructions{
-    padding-top: 2.5rem;
+    padding: 2.5rem ;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -326,37 +327,120 @@ input[type="datetime-local"]::-webkit-calendar-picker-indicator {
         display: flex;
         justify-content: space-between;
         gap: 3.125rem;
-        padding-inline:2.4rem ;
+        padding-inline:3.6rem  0 ;
     }
     
     /* Which Conatin a Single Steps for the Process*/
     .step-item{
         flex: 1;
         display: flex;
-        height: 11.125rem;
         flex-direction: column;
         justify-content: space-between;
         align-items: center;
-         border: 1px solid blue;
-         padding: 1rem 4rem;
+        gap: 0.5rem;
+         /* border: 1px solid blue; */
          
          & .step-number{
+            /* padding: 0.1rem; */
+            font-size: 2.3rem;
             width: 4rem;
-            padding: 0.75rem;
-            border: 2px solid greenyellow;
+            height: 3.25rem;
+            color: #e21e26;
+            font-weight: 400;
+            box-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.25);
+            border-radius: 0.2rem;
             text-align: center;
          }
     }
 
-    /* "step-details */
     .step-details{
+             flex: 1;
+             width: 100%;
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
             font-size: 0.875rem;
-            border: 1px yellow solid;
+            border: 1px black solid;
+            padding:  0.6875rem 3.4em;
+            text-align: center;
             & img{
                 display: block;
                 margin: 0 auto;
             }
     }
+
+    .step-description{
+        font-size: 0.81rem;
+    }
+
+
+   /* branch-location-contanier-new */
+    .branch-location-contanier-new{
+      padding-inline: var(--inlinePaddingDesktop);
+      background-color: black;
+      color: white;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 4.8rem;
+      padding: 3.5rem 6.25rem;
+      & h2{
+          margin: 0 auto;
+          font-size: 400;
+      }   
+    }
+
+    .location-list-new{
+      flex: 1;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 0.625rem;
+  }
+
+    .location-item-new{
+      display: flex;
+      justify-content: center;
+      gap: 0.675rem;
+      color:white;
+    font-size: 1.12rem;
+    font-weight: 400;
+    font-family: sans-serif;
+    padding-right: 5rem;
+    border-right: 1px white solid;
+    }
+
+/* frequently-asked-questions Container Styles For Accordian */
+
+    .frequently-asked-questions-new{
+      & h2{
+          font-size: 2.125rem  2.125rem;
+          font-weight: 400;
+          text-align: center;
+          padding-block:3.5rem 4rem;
+    }
+  }
+  .accordian-item-new{
+    border-bottom: 0.18rem solid rgba(205, 214, 218, 0.25);
+}
+/* Acccorfian Styles */
+.accordian-button{
+  width: 100%;
+padding-block: 1rem;
+background-color: white;
+text-align: start;
+position: relative;
+}
+/* Rotate the close button */
+.accordian-button::after{
+  content: url('./icons/xmark.svg');
+  position: absolute;
+  right: 0;
+  transform: rotate(45deg);
+}
+.accordian-button.active::after {
+  content: url('./icons/xmark.svg'); /* Change to another icon */
+}
 
 /* Resposnive Design */
 @media (max-width: 835px) {
@@ -517,8 +601,49 @@ input[type="datetime-local"]::-webkit-calendar-picker-indicator {
   }
 
   /* steps-container Desigin */
+
+  .rental-instructions{
+    & h2{
+        font-size: 1rem;
+        margin-right: auto;
+        }
+  }
   .steps-container{
     flex-direction: column;
+
     padding: 0rem;
+    gap: 1rem;
   }
+
+  /* Bramch Location div */
+  .branch-location-contanier-new{
+
+    gap: 1.56rem;
+    padding: 1.43rem 1rem;
+    & h2{
+        margin: 0 auto;
+        font-size: 400;
+    }   
+  }
+  .location-item-new{
+    padding-right: 0rem;
+    border:none;
+    font-size: 0.87rem;
+}
+
+.accordian-button{
+  font-weight: 500;
+}
+.accordian-content{
+  opacity: 80%;
+  padding-block: 1rem;
+}
+.frequently-asked-questions-new{
+  & h2{
+      font-size: 1rem;
+      font-weight: 400;
+      text-align: center;
+      padding-block:1rem;
+}
+}
 }
