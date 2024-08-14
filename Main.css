@@ -219,7 +219,7 @@ input[type="datetime-local"]::-webkit-calendar-picker-indicator {
   gap: 2.5rem;
   max-width: 30rem;
   padding-top: 2.3rem;
-  border: 2px solid yellow;
+  /* border: 2px solid yellow; */
   /* Child inside subscription-content */
   & .subscription-heading {
     font-style: 2.1rem;

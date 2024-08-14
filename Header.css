@@ -33,7 +33,7 @@ header{
     max-width:90rem;
     margin: 0 auto;
     height: 7.5rem;
-    border-bottom: blue 2px solid;
+    /* border-bottom: blue 2px solid; */
     display: flex;
     flex-direction: column;
     gap: 0.2rem;

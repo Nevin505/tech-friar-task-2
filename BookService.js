@@ -27,3 +27,25 @@ bookCarButton.addEventListener('click',()=>{
 })
 // console.log(elemnts[0])
 // onlyForMobileView.appendChild(elemnts[0])
+
+
+const getOptions=()=>{
+    const droppedElement=document.getElementsByClassName('dropLocation');
+    console.log(droppedElement[1]);
+    
+    console.log("Clicked");
+    onlyForMobileView[0].innerHTML=''
+    const clonedNode=elemnts[0].cloneNode(true);
+    const bookingDescriptionCloneNode=bookingDescription[0].cloneNode(true);
+    console.log(bookingDescriptionCloneNode);
+    
+    // bookingDescriptionCloneNode.removeChild(droppedElement[0])
+    const clonedSelectTag=clonedNode.querySelector('select');
+    clonedSelectTag.options[0].textContent  = 'Vehicle Type';
+    bookingDescriptionCloneNode.classList.add('changeLayout');
+    clonedNode.classList.add('visbleBookOptions')
+
+    onlyForMobileView[0].appendChild(clonedNode)
+    onlyForMobileView[0].appendChild(bookingDescriptionCloneNode);
+
+}
