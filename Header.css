@@ -257,7 +257,13 @@ position: relative;
 .item2{
     top: 68%;
 }
+.pickUp-OptionContainer>button:hover{
+    border-bottom: 1px solid black;
+}
 
+.border-bottom{
+    border: 1px solid black;
+}
 @media(max-width:1024px){
     .BrandLogo{
         width: 12.5rem;
@@ -403,6 +409,7 @@ position: relative;
    .dropLocation{
     display: block;
    }
+
    .userLocation-container{
        & select{
         background-color: #F6F7F9;

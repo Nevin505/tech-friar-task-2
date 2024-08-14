@@ -518,7 +518,7 @@ position: relative;
       height: 7.9rem;
     }
     & .car-item-details {
-      border: 2px solid blue;
+      /* border: 2px solid blue; */
       display: flex;
       flex-direction: column;
       height: 13.8rem;
