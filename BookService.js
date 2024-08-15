@@ -36,3 +36,69 @@ const addPickUpLocations=()=>{
  
       removeDifferentPickUp.style.display='block'
 }
+// subscribe-newLetter Validation
+document.getElementById('subscribe-newLetter').addEventListener('submit',(e)=>{
+  e.preventDefault();
+  const errorNameDisplayElement=document.getElementById('invalidNameMessage');
+  const errorEmailDisplayElement=document.getElementById('invalidEmailMessage')
+
+  const formData=new FormData(e.target);
+
+  const userEmail=formData.get('email')
+  const userName=formData.get('name')
+
+  if(fieldFalsyCheck(userEmail) ){
+    errorEmailDisplayElement.innerText='';
+    console.log("Herr test Passed");
+  }
+  else{
+    errorEmailDisplayElement.innerText='*Email Cannot Be Empty';
+  }
+
+  if(fieldFalsyCheck(userName) ){
+    errorNameDisplayElement.innerText='';
+  }
+  else{
+    errorNameDisplayElement.innerText='*Name Cannot Be Empty';
+    return;
+  }
+
+  alert("Successfullty Subscribed to Our NewsLetter")
+
+})
+
+//generateLink
+
+document.getElementById('inputLink').addEventListener('submit',(e)=>{
+  e.preventDefault();
+  const errorDisplayElement=document.getElementById('errorMessageEmail')
+  const formData=new FormData(e.target);
+  const phoneNumber=formData.get('phoneNumber')
+
+  const pattern =/^(\+91|\+91\-|0)?[789]\d{9}$/;
+
+  if(fieldFalsyCheck(phoneNumber) ){
+    errorDisplayElement.innerText='';
+    console.log("Herr test Passed");
+  }
+  else{
+    errorDisplayElement.innerText='*Cannot Be Empty';
+    return;
+  }
+  if(pattern.test(phoneNumber))
+  {
+      errorDisplayElement.innerText='';
+  }
+  else{
+    errorDisplayElement.innerText='*Enter a Valid Email';
+  }
+})
+
+// 0
+
+const fieldFalsyCheck=(fieldData)=>{
+    if(!fieldData.trim().length>0){
+      return false
+    }
+    return true
+}

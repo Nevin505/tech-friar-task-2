@@ -300,14 +300,20 @@
          <!-- Container for the subscription content -->
      <div class="subscription-content">
         <h2 class="subscription-heading">Subscribe here for exclusive offers and updates!</h2>
-          <div class="user-info-container">
-              <div class="user-input-boxes">
-                <input type="text" placeholder="Name" class="border-0">
-                <input type="text" placeholder="Email" class="border-0">
+          <form class="user-info-container" id="subscribe-newLetter">
+              <div class="user-input-boxes" >
+                    <input type="text" placeholder="Name" name="name" class="border-0">
+
+                    <input type="text" placeholder="Email" name="email" class="border-0">
+                 
+              </div>
+              <div class="error-message">
+                <p id="invalidNameMessage"></p>
+                <p id="invalidEmailMessage"></p>
               </div>
             <p  class="subscription-description">Don't miss out! enter your email and your name, then hit subscribe to unlock a world of special offers and details.</p>
             <button class="subscription-button border-0 pointer">Subscribe</button>
-          </div>
+          </form>
      </div>
 <!-- Container for the app download content -->
      <div class="app-download-content">
@@ -317,10 +323,11 @@
             <!-- Text paragraph for download instruction -->
              <p  id="download-instruction">Enter your number and receive  a direct link to download the app</p>
                 <!-- Container for phone number input and button -->
-               <div class="input-group" id="inputLink">
-                <input type="text" placeholder="Enter phone number" class=" border-0">
-                <button class="download-button border-0 pointer">Get The Link</button>
-               </div>
+               <form class="input-group" id="inputLink">
+                      <input type="text" name="phoneNumber" placeholder="Enter phone number" class=" border-0">
+                      <p id="errorMessageEmail"></p>
+                      <button class="download-button border-0 pointer" id="generateLink">Get The Link</button>
+               </form>
                  <!-- Container for app store icons -->
                <div  class="store-icons-container" id="icons">
                 <p>Get in on</p>
@@ -508,5 +515,6 @@
     <script src="./BookService.js"></script>
     <script src="./Resize.js"></script>
     <script src="./accordian.js"></script>
+     <script src=""></script>
   </body>
 </html>
